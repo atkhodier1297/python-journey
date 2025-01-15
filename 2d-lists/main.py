@@ -10,3 +10,14 @@ for row in matrix:
     for element in row:
         print(element, end=" ")
     print()  # Newline after each row
+
+# 2D List with people's information
+people = [
+    ["Alice", 25, "Female", "alice@example.com"],
+    ["Bob", 30, "Male", "bob@example.com"],
+    ["Charlie", 22, "Non-binary", "charlie@example.com"]
+]
+
+# Iterate over the data rows
+for person in people:
+    print(f"{person[0]:<10} {person[1]:<5} {person[2]:<10} {person[3]:<20}")
