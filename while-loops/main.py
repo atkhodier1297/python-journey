@@ -55,3 +55,26 @@ while attempts > 0:
 
             else:
                 print("\nInvalid choice. Please select a valid option.\n")
+
+
+
+def number_guessing_game():
+    secret_number = random.randint(1, 10)
+    guess = None
+    
+    print("Guess the number between 1 and 10!")
+    
+    while guess != secret_number:
+        try:
+            guess = int(input("Enter your guess: "))
+            
+            if guess < secret_number:
+                print("Too low! Try again.")
+            elif guess > secret_number:
+                print("Too high! Try again.")
+            else:
+                print("Congratulations! You guessed the number.")
+        except ValueError:
+            print("Invalid input. Please enter a number.")
+
+number_guessing_game()
